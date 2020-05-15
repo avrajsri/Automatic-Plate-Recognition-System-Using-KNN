@@ -14,7 +14,7 @@ root.geometry("470x270")
 root.resizable(width=False, height=False)
 root.title("Welcome To APRS")
 
-# module level variables ####################
+# module level variables 
 SCALAR_BLACK = (0.0, 0.0, 0.0)
 SCALAR_WHITE = (255.0, 255.0, 255.0)
 SCALAR_YELLOW = (0.0, 255.0, 255.0)
