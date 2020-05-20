@@ -180,9 +180,9 @@ def fun(event):
                 # -------------Mail System------------------------------------------
                 port = 587  # For starttls
                 smtp_server = "smtp.gmail.com"
-                sender_email = "itbpit2016@gmail.com"
+                sender_email = "itbpit2016@gmail.com"  #----Sender Email ID------
+                password = "btech2016"                 #----Sender Email Pass Code------
                 receiver_email = "avrbpit@gmail.com"
-                password = "btech2016"
                 message = "Subject: Alert Message Theft Car Detected\n\n\n" \
                           "Date: " + date + "\n" \
                           "Time: " + timeStamp + "\n" \
