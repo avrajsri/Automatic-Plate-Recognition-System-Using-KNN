@@ -24,7 +24,7 @@ SCALAR_RED = (0.0, 0.0, 255.0)
 # showSteps = True
 showSteps = False
 
-# ----------Set Path For Folder-----------------------
+# ----------Set Path For Folder------------
 def assure_path_exists(path):
     dir = os.path.dirname(path)
     if not os.path.exists(dir):
