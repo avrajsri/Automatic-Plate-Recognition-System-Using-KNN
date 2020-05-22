@@ -28,8 +28,9 @@ def detectPlatesInScene(imgOriginalScene):
     if Main.showSteps == True: # show steps #######################################################
         cv2.imshow("0", imgOriginalScene)
     # end if # show steps #########################################################################
-
-    imgGrayscaleScene, imgThreshScene = Preprocess.preprocess(imgOriginalScene)         # preprocess to get grayscale and threshold images
+   
+    # preprocess to get grayscale and threshold images
+    imgGrayscaleScene, imgThreshScene = Preprocess.preprocess(imgOriginalScene)      
 
     if Main.showSteps == True: # show steps #######################################################
         cv2.imshow("1a", imgGrayscaleScene)
@@ -207,15 +208,5 @@ def extractPlate(imgOriginal, listOfMatchingChars):
 
     return possiblePlate
 # end function
-
-
-
-
-
-
-
-
-
-
 
 
