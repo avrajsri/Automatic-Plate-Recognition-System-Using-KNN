@@ -429,9 +429,8 @@ def recognizeCharsInPlate(imgThresh, listOfMatchingChars):
 
     # end for
 
-    if Main.showSteps == True: # show steps #######################################################
+    if Main.showSteps == True: 
         cv2.imshow("10", imgThreshColor)
-    # end if # show steps #########################################################################
 
     return strChars
 # end function
