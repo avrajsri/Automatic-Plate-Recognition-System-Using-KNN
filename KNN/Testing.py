@@ -50,9 +50,9 @@ def main():
         os.system("pause")
         return
     # end try
-
-    npaClassifications = npaClassifications.reshape((npaClassifications.size, 1))       # reshape numpy array to 1d, necessary to pass to call to train
-
+    
+    # reshape numpy array to 1d, necessary to pass to call to train
+    npaClassifications = npaClassifications.reshape((npaClassifications.size, 1))       
     kNearest = cv2.ml.KNearest_create()                   # instantiate KNN object
 
     kNearest.train(npaFlattenedImages, cv2.ml.ROW_SAMPLE, npaClassifications)
