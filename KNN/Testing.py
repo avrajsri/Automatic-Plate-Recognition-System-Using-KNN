@@ -17,7 +17,8 @@ class ContourWithData():
     intRectHeight = 0           # bounding rect height
     fltArea = 0.0               # area of contour
 
-    def calculateRectTopLeftPointAndWidthAndHeight(self):               # calculate bounding rect info
+    # calculate bounding rect info
+    def calculateRectTopLeftPointAndWidthAndHeight(self):               
         [intX, intY, intWidth, intHeight] = self.boundingRect
         self.intRectX = intX
         self.intRectY = intY
@@ -34,7 +35,8 @@ def main():
     validContoursWithData = []              # we will fill these shortly
 
     try:
-        npaClassifications = np.loadtxt("Classifications.txt", np.float32)                  # read in training classifications
+        # read in training classifications
+        npaClassifications = np.loadtxt("Classifications.txt", np.float32)                  
     except:
         print ("error, unable to open classifications.txt, exiting program\n")
         os.system("pause")
