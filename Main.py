@@ -14,7 +14,7 @@ root.geometry("470x270")
 root.resizable(width=False, height=False)
 root.title("Welcome To APRS")
 
-# module level variables 
+# module level variables ####################
 SCALAR_BLACK = (0.0, 0.0, 0.0)
 SCALAR_WHITE = (255.0, 255.0, 255.0)
 SCALAR_YELLOW = (0.0, 255.0, 255.0)
@@ -24,11 +24,12 @@ SCALAR_RED = (0.0, 0.0, 255.0)
 # showSteps = True
 showSteps = False
 
-# ----------Set Path For Folder------------
+# ----------Set Path For Folder-----------------------
 def assure_path_exists(path):
     dir = os.path.dirname(path)
     if not os.path.exists(dir):
         os.makedirs(dir)
+
 
 assure_path_exists("Details/")
 assure_path_exists("KNN/")
@@ -41,6 +42,7 @@ def center(win):
     x = (win.winfo_screenwidth() // 2) - (width // 2)
     y = (win.winfo_screenheight() // 2) - (height // 2)
     win.geometry('{}x{}+{}+{}'.format(width, height, x, y))
+
 
 def fun(event):
     root.destroy()
@@ -178,9 +180,9 @@ def fun(event):
                 # -------------Mail System------------------------------------------
                 port = 587  # For starttls
                 smtp_server = "smtp.gmail.com"
-                sender_email = "itbpit2016@gmail.com"  #----Sender Email ID------
-                password = "btech2016"                 #----Sender Email Pass Code------
+                sender_email = "itbpit2016@gmail.com"
                 receiver_email = "avrbpit@gmail.com"
+                password = "btech2016"
                 message = "Subject: Alert Message Theft Car Detected\n\n\n" \
                           "Date: " + date + "\n" \
                           "Time: " + timeStamp + "\n" \
@@ -741,7 +743,8 @@ root.grid_rowconfigure(1, weight=1)
 root.grid_columnconfigure(1, weight=1)
 l2 = Label(root, text="by", font=('arial 12'))
 l2.pack(fill="both", expand=True)
-l3 = Label(root, text="Anand Vijay Rajsri (00120807717)", font=('arial 18'), fg="#009bff")
+l3 = Label(root, text="Anand Vijay Rajsri (00120807717)\nAriba Saher (00220807717)\nJugal Gautam (00320807717)",
+           font=('arial 18'), fg="#009bff")
 l3.pack(fill="both", expand=True)
 l4 = Label(root, text="... Tap To Continue ...", relief=SUNKEN, bd=1)
 l4.pack(side=BOTTOM, fill=X)
