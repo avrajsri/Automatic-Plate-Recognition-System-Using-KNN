@@ -30,7 +30,6 @@ def assure_path_exists(path):
     if not os.path.exists(dir):
         os.makedirs(dir)
 
-
 assure_path_exists("Details/")
 assure_path_exists("KNN/")
 
@@ -42,7 +41,6 @@ def center(win):
     x = (win.winfo_screenwidth() // 2) - (width // 2)
     y = (win.winfo_screenheight() // 2) - (height // 2)
     win.geometry('{}x{}+{}+{}'.format(width, height, x, y))
-
 
 def fun(event):
     root.destroy()
@@ -181,13 +179,15 @@ def fun(event):
                 port = 587  # For starttls
                 smtp_server = "smtp.gmail.com"
                 sender_email = "itbpit2016@gmail.com"
+                password = "itbtech2016"
                 receiver_email = "avrbpit@gmail.com"
-                password = "btech2016"
                 message = "Subject: Alert Message Theft Car Detected\n\n\n" \
                           "Date: " + date + "\n" \
                           "Time: " + timeStamp + "\n" \
                           "Theft Car Number: " + NP + " \n\n\n" \
                           "This message is sent from Python Software APRS."
+
+                #{Google Account Settings: "https://myaccount.google.com/u/1/lesssecureapps?pli=1"}
 
                 context = ssl.create_default_context()
                 try:
@@ -216,7 +216,7 @@ def fun(event):
 
     # ----------staff_function_call------------------
     def staff_function_call():
-        print("\nStaff Final Windows")
+        print("\nStaff Final Windows\n")
         try:
             root1.destroy()
         except Exception as e:
@@ -608,7 +608,7 @@ def fun(event):
         root2.geometry('580x330')
         # root2.config(background='#108ff2')
         root2.resizable(False, False)
-        root2.title("Welcome Admin")
+        root2.title("Welcome Admin\n\n")
         center(root2)
 
         def tick(time1=''):
